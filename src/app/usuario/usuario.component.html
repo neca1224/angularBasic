@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="usuario-content" >
+        <img src="assets/imagenPrueba.jpg">
+        <h4>Nombre: {{usuario.nombre}}</h4>
+        <h4>Apellido: {{usuario.apellido}}</h4>
+        <h4>Direccion: {{usuario.direccion}}</h4>
+        <h4>Nombre Hijos</h4>
+        <ul *ngFor="let i of usuario.nombreHijos">
+            <li>
+                <h4>{{i}}</h4>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
