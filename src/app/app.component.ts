@@ -43,4 +43,9 @@ export class AppComponent {
     this.contador = this.contador - numero;
   }
 
+  /**Esta funcion se ejecutara cuando en el hijo (SaludoComponent) se pulse un boton*/
+  recibirMensajeDelHijo(evento: string){
+    alert(evento);
+  }
+
 }
