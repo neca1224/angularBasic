@@ -10,6 +10,11 @@ export class SaludoComponent implements OnInit, OnDestroy, OnChanges {
  @Input() nombre: string = "Anonimo"
  @Output() mensajeEmitter: EventEmitter<string> = new EventEmitter<string>();
 
+ myStyle: object={
+  color: 'pink',
+  fontSize:'28px',
+  fontWeight:'bold'
+ }
   constructor() { }
 
   ngOnInit(): void {
@@ -18,7 +23,8 @@ export class SaludoComponent implements OnInit, OnDestroy, OnChanges {
   }
   
   ngOnChanges(changes: SimpleChanges): void {
-    console.log("ngOnChanges el componente recibe cambios")
+    console.log("ngOnChanges CAMBIO: Valor anterior", changes['nombre'].previousValue);
+    console.log("ngOnChanges CAMBIO: Valor Nuevo", changes['nombre'].currentValue);
   }
 
   ngOnDestroy(): void {
@@ -32,6 +38,19 @@ export class SaludoComponent implements OnInit, OnDestroy, OnChanges {
  enviarMensajeAlPadre(): void{
   //alert(`¡Hola, ${this.nombre} Alerta generada desde un click de boton`);
   this.mensajeEmitter.emit(`¡Hola, ${this.nombre} Alerta generada desde un click de boton`);
-} 
+  } 
 
 }
+
+/* Orden del ciclo de vida de los componentes
+* 1. ngOnChanges
+* 2. ngOnInit
+  3. ngAfterContentInit
+  4. ngAfterContentChecked
+  5. ngAfterViewInit
+  6. ngAfterViewChecked
+  7. ngAfterContentChecked
+  8. ngAfterViewChecked
+* 9. ngOnDestroy
+
+*/
