@@ -25,6 +25,8 @@
 
 <!--Input para trabajar NgModel-->
   <input type="text" placeholder="Nombre del Usuario" [(ngModel)]="usuario"/>
-  <app-saludo [nombre]="usuario"></app-saludo>
+  <app-saludo [nombre]="usuario" (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-saludo>
+  <app-saludo (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-saludo>
+  
 </body>
 </html>
