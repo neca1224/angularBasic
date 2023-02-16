@@ -24,9 +24,16 @@
   </app-usuario> 
 
 <!--Input para trabajar NgModel-->
-  <input type="text" placeholder="Nombre del Usuario" [(ngModel)]="usuario"/>
-  <app-saludo [nombre]="usuario" (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-saludo>
+  <!--input type="text" placeholder="Nombre del Usuario" [(ngModel)]="usuario"/-->
+  <!--app-saludo [nombre]="usuario" (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-saludo-->
   <!--app-saludo (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-saludo-->
   
+  <!--Ejemplos de usos del servicio-->
+  <app-contact-list></app-contact-list>
+
+  <!--Ejemplo de peticion HTTP-->
+  <app-login-form></app-login-form>
+
+
 </body>
 </html>
