@@ -8,31 +8,38 @@
 </head>
 <body>
   <h1> Esta es una prueba </h1>
+  <!--
   <h2>base: {{base}}</h2>
   <button (click)="sumar(base)"> Agregar {{base}}</button>
   <p> contador: {{contador}}</p>
   <button (click)="restar(base)"> Restar {{base}}</button>
-  
+
   <label for="hijo">Nombre del hijo</label>
   <input type="text" [(ngModel)] = "nuevoHijo">
   <h4>{{nuevoHijo}}</h4>
-  
-  
-  <app-usuario 
+    -->
+
+  <!--app-usuario
         *ngFor="let i of usuarios"
         [usuario]="i">
-  </app-usuario> 
+  </app-usuario-->
 
 <!--Input para trabajar NgModel-->
   <!--input type="text" placeholder="Nombre del Usuario" [(ngModel)]="usuario"/-->
   <!--app-saludo [nombre]="usuario" (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-saludo-->
   <!--app-saludo (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-saludo-->
-  
+
   <!--Ejemplos de usos del servicio-->
-  <app-contact-list></app-contact-list>
+  <!--app-contact-list></app-contact-list-->
 
   <!--Ejemplo de peticion HTTP-->
-  <app-login-form></app-login-form>
+  <!--app-login-form></app-login-form-->
+  <!--Ejemplo de formularios Reactivos-->
+  <!--app-formulario></app-formulario-->
+
+  <!--app-formulario-anidado></app-formulario-anidado-->
+  <!--app-formulario-array></app-formulario-array-->
+  <app-formulario-validado></app-formulario-validado>
 
 
 </body>
